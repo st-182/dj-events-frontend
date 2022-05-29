@@ -1,6 +1,7 @@
 import Head from "next/head";
 import React from "react";
 import { LayoutInterface } from "../interfaces";
+import Header from "./Header";
 
 export default function Layout({
   title,
@@ -15,6 +16,7 @@ export default function Layout({
         <meta name="description" content={description} />
         <meta name="keywords" content={keywords} />
       </Head>
+      <Header />
       <main>{children}</main>
     </div>
   );

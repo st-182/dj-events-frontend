@@ -3,14 +3,12 @@ import {
   Flex,
   Heading,
   Input,
-  useColorMode,
   useColorModeValue
 } from "@chakra-ui/react";
 import React from "react";
 import Layout from "../components/Layout";
 
 export default function login() {
-  const { toggleColorMode } = useColorMode();
   const formBackground = useColorModeValue("gray.100", "gray.700");
   return (
     <Layout title="Login | DJ events">
@@ -26,9 +24,6 @@ export default function login() {
           />
           <Button colorScheme={"teal"} mb={6}>
             Log In
-          </Button>
-          <Button onClick={toggleColorMode} colorScheme={"teal"}>
-            Toggle Color Mode
           </Button>
         </Flex>
       </Flex>
