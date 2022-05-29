@@ -1,10 +1,12 @@
 import React from "react";
+import Layout from "../../components/Layout";
 
 export default function AddEventPage() {
   return (
-    <div>
-      <h1>Add Event</h1>
-      oem
-    </div>
+    <Layout title="Add event | JS Events">
+      <div>
+        <h1>Add Event</h1>
+      </div>
+    </Layout>
   );
 }

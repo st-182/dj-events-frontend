@@ -4,7 +4,7 @@ import Layout from "../components/Layout";
 
 export default function AboutPage() {
   return (
-    <Layout>
+    <Layout title="About | DJ Events">
       <div>
         <h1>About</h1>
         <p>Page for finding musical events.</p>
