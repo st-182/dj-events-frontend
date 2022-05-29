@@ -6,9 +6,14 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "prettier-format": "prettier --config .prettierrc 'components/*.tsx' --write"
   },
   "dependencies": {
+    "@chakra-ui/react": "^2.1.2",
+    "@emotion/react": "^11.9.0",
+    "@emotion/styled": "^11.8.1",
+    "framer-motion": "^6.3.4",
     "next": "12.1.6",
     "react": "18.1.0",
     "react-dom": "18.1.0"
@@ -18,6 +23,7 @@
     "@types/react": "^18.0.9",
     "eslint": "8.16.0",
     "eslint-config-next": "12.1.6",
+    "prettier": "^2.6.2",
     "typescript": "^4.7.2"
   }
 }
