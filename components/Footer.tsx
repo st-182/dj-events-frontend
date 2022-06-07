@@ -1,5 +1,17 @@
-import { Container, Stack } from "@chakra-ui/react";
 import React from "react";
+import {
+  Button,
+  ButtonGroup,
+  Container,
+  Divider,
+  IconButton,
+  Input,
+  Stack,
+  Text
+} from "@chakra-ui/react";
+import Logo from "./Logo";
+import { AiFillLinkedin, AiFillGithub, AiFillInstagram } from "react-icons/ai";
+import Link from "next/link";
 
 export default function Footer() {
   return (
@@ -12,7 +24,7 @@ export default function Footer() {
       >
         <Stack spacing={{ base: "6", md: "8" }} align="start">
           <Logo />
-          <Text color="muted">Create beautiful websites remarkably fast.</Text>
+          <Text color="muted">Just the best events. </Text>
         </Stack>
         <Stack
           direction={{ base: "column-reverse", md: "column", lg: "row" }}
@@ -21,12 +33,18 @@ export default function Footer() {
           <Stack direction="row" spacing="8">
             <Stack spacing="4" minW="36" flex="1">
               <Text fontSize="sm" fontWeight="semibold" color="subtle">
-                Product
+                Events
               </Text>
               <Stack spacing="3" shouldWrapChildren>
-                <Button variant="link">How it works</Button>
-                <Button variant="link">Pricing</Button>
-                <Button variant="link">Use Cases</Button>
+                <Link href="/">
+                  <Button variant="link">How it works</Button>
+                </Link>
+                <Link href="/">
+                  <Button variant="link">Pricing</Button>
+                </Link>
+                <Link href="/">
+                  <Button variant="link">Use Cases</Button>
+                </Link>
               </Stack>
             </Stack>
             <Stack spacing="4" minW="36" flex="1">
@@ -50,7 +68,7 @@ export default function Footer() {
               maxW={{ lg: "360px" }}
             >
               <Input placeholder="Enter your email" type="email" required />
-              <Button variant="primary" type="submit" flexShrink={0}>
+              <Button variant="outline" type="submit" flexShrink={0}>
                 Subscribe
               </Button>
             </Stack>
@@ -66,7 +84,7 @@ export default function Footer() {
         align="center"
       >
         <Text fontSize="sm" color="subtle">
-          &copy; {new Date().getFullYear()} Chakra UI Pro, Inc. All rights
+          &copy; {new Date().getFullYear()} Aristidas Jasudas. All rights
           reserved.
         </Text>
         <ButtonGroup variant="ghost">
@@ -74,19 +92,19 @@ export default function Footer() {
             as="a"
             href="#"
             aria-label="LinkedIn"
-            icon={<FaLinkedin fontSize="1.25rem" />}
+            icon={<AiFillLinkedin />}
           />
           <IconButton
             as="a"
             href="#"
             aria-label="GitHub"
-            icon={<FaGithub fontSize="1.25rem" />}
+            icon={<AiFillGithub />}
           />
           <IconButton
             as="a"
             href="#"
             aria-label="Twitter"
-            icon={<FaTwitter fontSize="1.25rem" />}
+            icon={<AiFillInstagram />}
           />
         </ButtonGroup>
       </Stack>

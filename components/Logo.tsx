@@ -1,8 +1,8 @@
-import React from 'react'
+import { Flex, Heading } from "@chakra-ui/react";
+import Link from "next/link";
+import React from "react";
 
-type
-
-export default function Logo({mr}:) {
+export default function Logo() {
   return (
     <Flex align="center" mr={5}>
       <Link href="/">

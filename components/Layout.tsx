@@ -1,6 +1,8 @@
+import { Container } from "@chakra-ui/react";
 import Head from "next/head";
 import React from "react";
 import { LayoutInterface } from "../interfaces";
+import Footer from "./Footer";
 import Header from "./Header";
 
 export default function Layout({
@@ -10,15 +12,16 @@ export default function Layout({
   children
 }: LayoutInterface) {
   return (
-    <div>
+    <>
       <Head>
         <title>{title}</title>
         <meta name="description" content={description} />
         <meta name="keywords" content={keywords} />
       </Head>
       <Header />
-      <main>{children}</main>
-    </div>
+      <Container as="main">{children}</Container>
+      <Footer />
+    </>
   );
 }
 

@@ -27,10 +27,13 @@ export default function Header(props: any) {
       align="center"
       justify="space-between"
       wrap="wrap"
-      padding={6}
+      px={6}
+      py={2}
       bg="teal.500"
       color="white"
       {...props}
+      position={"sticky"}
+      top={0}
     >
       <Flex align="center" mr={5}>
         <Link href="/">
@@ -76,7 +79,7 @@ export default function Header(props: any) {
           _hover={{ bg: "teal.700", borderColor: "teal.700" }}
           onClick={handleCreateAccount}
         >
-          Create account
+          Login
         </Button>
       </Flex>
     </Flex>
