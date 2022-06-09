@@ -1,21 +1,23 @@
 import React from "react";
 import {
+  Box,
   Button,
   ButtonGroup,
   Container,
   Divider,
   IconButton,
   Input,
+  Link,
   Stack,
   Text
 } from "@chakra-ui/react";
 import Logo from "./Logo";
 import { AiFillLinkedin, AiFillGithub, AiFillInstagram } from "react-icons/ai";
-import Link from "next/link";
+import NextLink from "next/link";
 
 export default function Footer() {
   return (
-    <Container as={"footer"}>
+    <Box as={"footer"} px={10}>
       <Stack
         spacing="8"
         direction={{ base: "column", md: "row" }}
@@ -36,15 +38,15 @@ export default function Footer() {
                 Events
               </Text>
               <Stack spacing="3" shouldWrapChildren>
-                <Link href="/">
-                  <Button variant="link">How it works</Button>
-                </Link>
-                <Link href="/">
-                  <Button variant="link">Pricing</Button>
-                </Link>
-                <Link href="/">
-                  <Button variant="link">Use Cases</Button>
-                </Link>
+                <NextLink href="/">
+                  <Link variant="link">How it works</Link>
+                </NextLink>
+                <NextLink href="/">
+                  <Link variant="link">Pricing</Link>
+                </NextLink>
+                <NextLink href="/">
+                  <Link variant="link">Use Cases</Link>
+                </NextLink>
               </Stack>
             </Stack>
             <Stack spacing="4" minW="36" flex="1">
@@ -108,6 +110,6 @@ export default function Footer() {
           />
         </ButtonGroup>
       </Stack>
-    </Container>
+    </Box>
   );
 }

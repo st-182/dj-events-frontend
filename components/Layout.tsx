@@ -1,9 +1,11 @@
 import { Container } from "@chakra-ui/react";
 import Head from "next/head";
+import { useRouter } from "next/router";
 import React from "react";
 import { LayoutInterface } from "../interfaces";
 import Footer from "./Footer";
 import Header from "./Header";
+import ShowCase from "./ShowCase";
 
 export default function Layout({
   title,
@@ -11,6 +13,7 @@ export default function Layout({
   description,
   children
 }: LayoutInterface) {
+  const router = useRouter();
   return (
     <>
       <Head>
@@ -19,6 +22,7 @@ export default function Layout({
         <meta name="keywords" content={keywords} />
       </Head>
       <Header />
+      {router.pathname === "/" && <ShowCase />}
       <Container as="main">{children}</Container>
       <Footer />
     </>

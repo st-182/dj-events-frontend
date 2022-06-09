@@ -3,13 +3,14 @@ import {
   Button,
   Flex,
   Heading,
+  Link,
   Stack,
   Text,
   useColorMode
 } from "@chakra-ui/react";
 import React, { useState } from "react";
 import { HamburgerIcon, MoonIcon, SunIcon } from "@chakra-ui/icons";
-import Link from "next/link";
+import NextLink from "next/link";
 import Router from "next/router";
 
 export default function Header(props: any) {
@@ -36,11 +37,11 @@ export default function Header(props: any) {
       top={0}
     >
       <Flex align="center" mr={5}>
-        <Link href="/">
+        <NextLink href="/">
           <Heading as="h1" size="lg" letterSpacing={"tighter"} cursor="pointer">
             DJ Events
           </Heading>
-        </Link>
+        </NextLink>
       </Flex>
 
       <Box display={{ base: "block", md: "none" }} onClick={handleToggle}>
@@ -55,15 +56,17 @@ export default function Header(props: any) {
         flexGrow={1}
         mt={{ base: 4, md: 0 }}
       >
-        <Link href={"/about"}>
-          <Text cursor="pointer">About</Text>
-        </Link>
-        <Link href={"/events"}>
-          <Text cursor="pointer">Events</Text>
-        </Link>
-        <Link href={"/events/add"}>
-          <Text cursor="pointer">Add event</Text>
-        </Link>
+        <NextLink href={"/about"}>
+          <Link cursor="pointer">About</Link>
+        </NextLink>
+
+        <NextLink href={"/events"}>
+          <Link cursor="pointer">Events</Link>
+        </NextLink>
+
+        <NextLink href={"/events/add"}>
+          <Link cursor="pointer">Add event</Link>
+        </NextLink>
       </Stack>
 
       <Flex

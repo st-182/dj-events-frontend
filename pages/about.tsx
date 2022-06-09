@@ -1,6 +1,6 @@
-import Link from "next/link";
+import NextLink from "next/link";
 import React from "react";
-import Layout from "../components/Layout";
+import Layout from "@/components/Layout";
 
 export default function AboutPage() {
   return (
@@ -9,7 +9,7 @@ export default function AboutPage() {
         <h1>About</h1>
         <p>Page for finding musical events.</p>
         <p>Version 1.0</p>
-        <Link href="/">Home</Link>
+        <NextLink href="/">Home</NextLink>
       </div>
     </Layout>
   );
